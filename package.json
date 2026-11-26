@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "build:cf": "npx @opennextjs/cloudflare build",
+    "deploy:cf": "npx @opennextjs/cloudflare deploy"
   },
   "dependencies": {
     "@prisma/client": "^6.4.1",
@@ -15,6 +15,7 @@
     "react-dom": "19.3.0"
   },
   "devDependencies": {
+    "@opennextjs/cloudflare": "^0.5.0",
     "@tailwindcss/turbopack": "4.3.3",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -24,8 +25,8 @@
     "eslint-config-next": "16.4.6",
     "prisma": "^6.4.1",
     "tailwindcss": "4.3.3",
-    "typescript": "^5",
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "typescript": "^5"
   },
   "prisma": {
     "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
